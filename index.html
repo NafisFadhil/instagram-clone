@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram - Clone Coding</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/post.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <script>
+    let is_liked = true;
+    function like() {
+      if (is_liked == true) {
+        $('#heart').attr('src', 'assets/image/icons/12.png')
+        is_liked = false;
+      } else {
+        $('#heart').attr('src', 'assets/image/icons/5.png')
+        is_liked = true;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <div class="nav flex-row">
+    <div class="nav-content flex-row">
+      <div class="logo flex-row">
+        <img width="102" src="assets/image/logo_instagram.png">
+        <i class="bi bi-chevron-down"></i>
+      </div>
+      <div class="search-box flex-row">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="icons flex-row">
+        <img src="assets/image/icons/1.png">
+        <img src="assets/image/icons/2.png">
+        <img src="assets/image/icons/3.png">
+        <img src="assets/image/icons/4.png">
+        <img src="assets/image/icons/5.png">
+        <img width="32" src="assets/image/icons/6.png">
+      </div>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+
+  <!-- Main Start -->
+  <div class="main flex-row">
+    <!-- Post Start -->
+    <div class="post flex-col">
+      <div class="profile flex-row">
+        <div class="img-wrap">
+          <img width="32" src="assets/image/profile/smk.jpg">
+        </div>
+        <p class="flex-col">
+          <span>smkmuhbligo_ig</span>
+          <!-- <span>Brisbane, Queensland, Australia</span> -->
+        </p>
+        <img width="20" src="assets/image/icons/7.png">
+      </div>
+      <div class="imgs swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img class="post" src="/assets/image/post/fadhil.jpg"></div>
+          <div class="swiper-slide"><img class="post" src="/assets/image/post/fadhil.jpg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="post-icons flex-row">
+        <img id="heart" onclick="like()" src="assets/image/icons/5.png">
+        <img src="assets/image/icons/9.png">
+        <img src="assets/image/icons/2.png">
+        <img src="assets/image/icons/10.png">
+      </div>
+      <div class="likes">
+        9,999 likes
+      </div>
+      <div class="comments">
+        <span class="title">smkmuhbligo_ig</span>
+        SERBA-SERBI PRESTASI
+        <span class="hashtag">#LKS</span>
+        <span class="hashtag">#Pekalongan</span>
+      </div>
+      <div class="count">
+        View all 169 comments
+      </div>
+      <div class="time">
+        24 HOURS AGO
+      </div>
+    </div>
+    <!-- Post End -->
+
+    <!-- Account Start -->
+    <div class="account flex-col">
+      <div class="account-content">
+        <li class="flex-row">
+          <div class="img-wrap">
+            <img width="56" src="assets/image/icons/6.png">
+          </div>
+          <p class="flex-col">
+            <span>nafis.fadhil</span>
+            <span>Muhammad Nafis Fadhil</span>
+          </p>
+          <a href="#">switch</a>
+        </li>
+        <li class="flex-row suggestion">
+          <span>Suggestions for you</span>
+          <a href="#">See All</a>
+        </li>
+        <li class="flex-row friends">
+          <div class="img-wrap">
+            <img width="32" src="assets/image/profile/smk.jpg">
+          </div>
+          <p class="flex-col">
+            <span>smkmuhbligo_ig</span>
+            <span>Follows you</span>
+          </p>
+          <a href="#">Follow</a>
+        </li>
+        <li class="flex-row friends">
+          <div class="img-wrap">
+            <img width="32" src="assets/image/follower/2.png">
+          </div>
+          <p class="flex-col">
+            <span>bill_gates</span>
+            <span>Popular</span>
+          </p>
+          <a href="#">Follow</a>
+        </li>
+        <li class="flex-row friends">
+          <div class="img-wrap">
+            <img width="32" src="assets/image/follower/3.png">
+          </div>
+          <p class="flex-col">
+            <span>shakira</span>
+            <span>Popular</span>
+          </p>
+          <a href="#">Follow</a>
+        </li>
+        <li class="flex-row friends">
+          <div class="img-wrap">
+            <img width="32" src="assets/image/follower/4.png">
+          </div>
+          <p class="flex-col">
+            <span>anne</span>
+            <span>Popular</span>
+          </p>
+          <a href="#">Follow</a>
+        </li>
+        <li class="flex-row friends">
+          <div class="img-wrap">
+            <img width="32" src="assets/image/follower/5.png">
+          </div>
+          <p class="flex-col">
+            <span>mumu_s</span>
+            <span>Popular</span>
+          </p>
+          <a href="#">Follow</a>
+        </li>
+      </div>
+      <div class="about">
+        <a href="#">About</a>
+        <a href="#">Help</a>
+        <a href="#">Press</a>
+        <a href="#">API</a>
+        <a href="#">Jobs</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Locations</a>
+        <a href="#">Language</a>
+        <a href="#">English</a>
+      </div>
+      <div class="name">
+        © 2023 INSTAGRAM FROM META
+      </div>
+    </div>
+    <!-- Account End -->
+
+  </div>
+
+  <!-- Main End -->
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: false,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
+</html>
